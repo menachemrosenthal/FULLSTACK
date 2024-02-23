@@ -1,0 +1,36 @@
+table {
+    padding: 30px;
+    color: black;
+    margin: 0 auto;
+    
+}
+img {
+    max-width: 300px;
+    max-height: 300px; /* Set a maximum height for the images */
+    
+    margin: 0; /* Center images */
+}
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* Media Query for Tablets and Smaller Desktops */
+@media only screen and (max-width: 600px) {
+    .table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .table img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
