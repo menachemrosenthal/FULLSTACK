@@ -6,9 +6,9 @@ table {
 }
 img {
     max-width: 300px;
-    max-height: 300px; /* Set a maximum height for the images */
+    max-height: 300px; 
     
-    margin: 0; /* Center images */
+    margin: 0; 
 }
 td {
     border: 1px solid #ddd;
@@ -21,7 +21,15 @@ header {
     padding: 20px;
     text-align: center;
 }
-/* Media Query for Tablets and Smaller Desktops */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: Add a background color */
+    padding: 10px;
+}
+
 @media only screen and (max-width: 600px) {
     .table td {
         display: block;
