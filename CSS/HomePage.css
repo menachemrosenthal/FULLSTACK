@@ -45,18 +45,35 @@ iframe {
     border: none;
     overflow: hidden;
 }
-
-
-
+nav{
+    display: grid;
+    flex-direction: column;
+    margin-left:0px;
+    margin-top: 75px;
+}
+li{
+    margin: 30px;
+    list-style-type: none;
+    padding-left: 0;
+}
+nav ul li a {
+    color: #eee;
+    margin: 25px;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+nav a:hover{
+    color: #000000;
+}
 .menu {
     position: fixed;
     left: 0;
     top: 0;
-    width: 25%; /* Définir la largeur du menu à 25% */
+    width: 20%; 
     height: 100%;
-    background-color: #333;
+    background-color: #515458;
     color: #fff;
-    transition: transform 0.3s ease;
+    transition: transform 1.0s;
     transform: translateX(-100%);
 }
 
@@ -69,7 +86,7 @@ input[type="checkbox"]:checked ~ .menu {
 }
 
 .contents {
-    margin-left: 25%; /* Assurez-vous que le contenu ne soit pas caché par le menu */
+    margin-left: 25%;
     height: 100%;
     background-color: #eee;
 }
@@ -80,7 +97,7 @@ input[type="checkbox"]:checked ~ .menu {
     left: 20px;
     top: 20px;
     padding: 10px 15px;
-    background-color: #333;
+    background-color: #515458;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
