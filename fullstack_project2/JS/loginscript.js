@@ -2,7 +2,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
     const loginUsername = document.getElementById('login-username').value;
     const loginPassword = document.getElementById('login-password').value;
-
+    
     // Retrieve existing users from local storage
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -10,6 +10,8 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
     const user = users.find(user => user.username === loginUsername && user.password === loginPassword);
 
     if (user) {
+        // set current user
+        localStorage.setItem('currentuser', loginUsername);
         alert('Login successful!');
         window.location.href = 'homepage.html'; // Redirect to home page
     } else {

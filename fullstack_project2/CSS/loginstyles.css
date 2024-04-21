@@ -2,7 +2,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -39,6 +38,10 @@ button {
     cursor: pointer;
     border-radius: 5px;
     width: 100%;
+}
+
+#sighnup {
+    text-align: center;
 }
 
 #error-message {

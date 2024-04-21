@@ -11,6 +11,12 @@ header {
     padding: 20px 0;
     margin-bottom: 30px;
 }
+
+.login-button {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+}
 h1 {
     margin: 0;
     font-size: 36px;
@@ -55,4 +61,23 @@ h1 {
 }
 .game a:hover {
     background-color: #45a049;
+}
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center;
+    padding: 20px 0; 
+    position: fixed; 
+    width: 100%; 
+    bottom: 0; 
+}
+
+footer a {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
 }

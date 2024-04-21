@@ -1,16 +1,37 @@
-import ScoreboardView from "./scoreboard/ScoreboardView.js";
+// Retrieve all usernames from local storage and parse as JSON
+const usernames = JSON.parse(localStorage.getItem('users')) || [];
+console.log(usernames); // Debugging: Print the usernames array to the console
 
-let playerOneScore = 0;
-let playerTwoScore = 0;
-const root = document.querySelector("#app");
-const view = new ScoreboardView(root, "Player One", "Player Two", (player, direction) => {
-	const difference = direction === "minus" ? -1 : 1;
+// Function to get scores for a specific user
+const getScoresForUser = (username) => {
+    return JSON.parse(localStorage.getItem(username)) || { connect4: [], snake: [] };
+};
 
-	if (player === "one") {
-		playerOneScore = Math.max(playerOneScore + difference, 0);
-	} else {
-		playerTwoScore = Math.max(playerTwoScore + difference, 0);
-	}
+// Function to render scoreboard
+const renderScoreboard = () => {
+    const scoreboardTable = document.getElementById('scoreboard-body');
 
-	view.update(playerOneScore, playerTwoScore);
-});
+    // Clear existing content
+    scoreboardTable.innerHTML = '';
+
+    // Iterate through each username
+    usernames.forEach(username => {
+        // Get scores for the current user
+        const scores = getScoresForUser(username.username);
+        // Create a new row for the user
+        const row = document.createElement('tr');
+        console.log(username); 
+        row.innerHTML = `
+            <td>${username.username}</td>
+            <td>${scores.connect4.join(', ')}</td>
+            <td>${scores.snake.join(', ')}</td>
+        `;
+
+        // Append row to scoreboard table
+        scoreboardTable.appendChild(row);
+    });
+};
+
+// Call renderScoreboard function to initially populate the scoreboard
+renderScoreboard();
+

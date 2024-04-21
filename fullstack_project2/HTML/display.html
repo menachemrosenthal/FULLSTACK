@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Scoreboard with HTML, CSS & JavaScript</title>
-	<link rel="stylesheet" href="/fullstack_project2/CSS/display,css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fullstack_project2/CSS/display.css">
+    <title>Scoreboard</title>
 </head>
 <body>
-	<div id="app"></div>
-	<script src="/fullstack_project2/JS/display.js" type="module"></script>
+    <div class="container">
+        <h1>Scoreboard</h1>
+        <table id="scoreboard">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Connect4 Scores</th>
+                    <th>Snake Scores</th>
+                </tr>
+            </thead>
+            <tbody id="scoreboard-body">
+                <!-- Scoreboard content will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/fullstack_project2/JS/display.js"></script>
 </body>
 </html>

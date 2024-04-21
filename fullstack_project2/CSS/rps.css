@@ -40,10 +40,12 @@ body {
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
 .play-board .food {
-  background: #FF003D;
+  background: #ffffff;
+  border-radius:50%;
 }
 .play-board .head {
   background: #60CBFF;
+  border-radius:30%;
 }
 .controls {
   display: none;
